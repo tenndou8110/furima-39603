@@ -30,7 +30,7 @@ Things you may want to cover:
 |Column            |Type              |Options                |
 |------------------|------------------|-----------------------|
 |nickname          |string            |null:false             |
-|email             |string            |null:false             |
+|email             |string            |null:false,unique: true|
 |encrypted_password|string            |null:false             |
 |last_name         |string            |null:false             |
 |first_name        |string            |null:false             |
@@ -62,14 +62,14 @@ Things you may want to cover:
 
 |Column            |Type              |Options                     |
 |------------------|------------------|----------------------------|
-|user              |references        |foreign_key :true           |
-|item              |references        |foreign_key :true           |
+|user              |references        |null:false,foreign_key :true|
+|item              |references        |null:false,foreign_key :true|
 
 - belongs_to :user
 - belongs_to :item
 - has_one    :payment
 
-## Shippingテーブル
+## paymentsテーブル
 
 |Column            |Type              |Options                     |
 |------------------|------------------|----------------------------|
