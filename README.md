@@ -29,14 +29,14 @@ Things you may want to cover:
 
 |Column            |Type              |Options                |
 |------------------|------------------|-----------------------|
-|nickname          |string            |null:false,unique: true|
-|email             |string            |null:false,unique: true|
-|encrypted_password|string            |null:false,unique: true|
+|nickname          |string            |null:false             |
+|email             |string            |null:false             |
+|encrypted_password|string            |null:false             |
 |last_name         |string            |null:false             |
 |first_name        |string            |null:false             |
 |last_name_kana    |string            |null:false             |
 |first_name_kana   |string            |null:false             |
-|date of birth     |date              |null:false             |
+|date_of_birth     |date              |null:false             |
 
 - has_many :items
 - has_many :orders
@@ -52,32 +52,33 @@ Things you may want to cover:
 |item_condition_id |integer           |null:false                  |
 |prefectune_id     |integer           |null:false                  |
 |shipping_cost_id  |integer           |null:false                  |
+|category_id       |integer           |null:false                  |
 |price             |integer           |null:false                  |
 
-- belongs_to :users
-- has_one    :orders
+- belongs_to :user
+- has_one    :order
 
 ## ordersテーブル
 
 |Column            |Type              |Options                     |
 |------------------|------------------|----------------------------|
 |user              |references        |foreign_key :true           |
-item               |references        |foreign_key :true           |
+|item              |references        |foreign_key :true           |
 
-- belongs_to :users
-- belongs_to :items
-- has_one    :payments
+- belongs_to :user
+- belongs_to :item
+- has_one    :payment
 
-## Shipping address
+## Shippingテーブル
 
 |Column            |Type              |Options                     |
 |------------------|------------------|----------------------------|
-|orders            |references        |null:false,foreign_key: true|
-|post code         |string            |null:false                  |
+|order             |references        |null:false,foreign_key: true|
+|post_code         |string            |null:false                  |
 |prefecture_id     |integer           |null:false                  |
 |city              |string            |null:false                  |
 |blook             |string            |null:false                  |
 |building          |string            |                            |
 |phone_namber      |string            |null:false                  |
 
-- belong_to :orders
+- belong_to :order
