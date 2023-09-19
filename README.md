@@ -50,9 +50,8 @@ Things you may want to cover:
 |description       |text              |null:false                  |
 |category_id       |integer           |null:false                  |
 |item_condition_id |integer           |null:false                  |
-|prefectune_id     |integer           |null:false                  |
+|prefecture_id     |integer           |null:false                  |
 |shipping_cost_id  |integer           |null:false                  |
-|category_id       |integer           |null:false                  |
 |price             |integer           |null:false                  |
 
 - belongs_to :user
