@@ -5,9 +5,9 @@ FactoryBot.define do
     password              {'pass111'}
     password_confirmation {'pass111'}
     date_of_birth         {'2002-07-16'}
-    first_name           {'名'}
+    firast_name           {'名'}
     last_name             {'姓'}
-    first_name_kana      {'メイ'}
+    firast_name_kana      {'メイ'}
     last_name_kana        {'セイ'}
   end
 end
