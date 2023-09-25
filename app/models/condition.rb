@@ -1,4 +1,4 @@
-class Condition < ActiveHash::Base
+class Condition < ApplicationRecord
   include ActiveHash::Associations
   self.data = [
     { id: 1, name: '---' },

@@ -1,4 +1,4 @@
-class DeliveryDate < ActiveHash::Base
+class DeliveryDate < ApplicationRecord
   include ActiveHash::Associations
   self.data = [
     { id: 1, name: '---' },

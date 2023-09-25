@@ -1,4 +1,4 @@
-class ShippingCost < ActiveHash::Base
+class ShippingCost < ApplicationRecord
   include ActiveHash::Associations
   self.data = [
     { id: 1, name: '---' },
