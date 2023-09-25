@@ -1,4 +1,4 @@
-class Category < ApplicationRecord
+class Category < Application::base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: 'レディース' },
